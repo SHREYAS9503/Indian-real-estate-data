@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Real Estate Co.</div>
+        <!-- <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav> -->
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1>Property Search</h1>
+            <form action="/search" method="POST" class="search-form">
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="min_price">Minimum Price:</label>
+                    <input type="number" id="min_price" name="min_price" required>
+                </div>
+                <div class="form-group">
+                    <label for="max_price">Maximum Price:</label>
+                    <input type="number" id="max_price" name="max_price" required>
+                </div>
+                <div class="form-group">
+                    <label for="min_area">Minimum Area (sq):</label>
+                    <input type="number" id="min_area" name="min_area" required>
+                </div>
+                <div class="form-group">
+                    <label for="max_area">Maximum Area (sq):</label>
+                    <input type="number" id="max_area" name="max_area" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Real Estate Co. All rights reserved.</p>
+    </footer>
+</body>
+</html>

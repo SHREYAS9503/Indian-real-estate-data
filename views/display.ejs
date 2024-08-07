@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link external CSS file -->
+
+    <style>
+        /* Include all CSS styles here */
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 8px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            vertical-align: top;
+        }
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .card p {
+            margin: 4px 0;
+        }
+        .propname{
+            font-size: 50px;
+            font-family: 20;
+        }
+    </style>
+</head>
+<body>
+    <h1>Property Details</h1>
+
+    <% propertiesData.forEach(property => { %>
+        <div class="card">
+            <h2 class="propname"><%= property.Property_Name %></h2>
+            <p><strong>City:</strong> <%= property.City_name %></p>
+            <p><strong>Status:</strong> <%= property.Property_status %></p>
+            <p><strong>Price per Unit Area:</strong> <%= property.Price_per_unit_area %></p>
+            <p><strong>Price:</strong> <%= property.Price %></p>
+            <p><strong>Furnished:</strong> <%= property.is_furnished ? 'Yes' : 'No' %></p>
+            <p><strong>No. of BHK:</strong> <%= property.No_of_BHK %></p>
+            <p><strong>Property Type:</strong> <%= property.Property_type %></p>
+            <p><strong>Size:</strong> <%= property.Size %></p>
+            <p><strong>Project URL:</strong> <a href="<%= property.Project_URL %>"><%= property.Project_URL %></a></p>
+        </div>
+    <% }); %>
+</body>
+</html>
